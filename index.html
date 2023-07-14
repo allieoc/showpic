@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kulim+Park&display=swap" rel="stylesheet">
     <title>SHOWPIC</title>
 </head>
 <body>
@@ -12,12 +19,21 @@
             <h3>the random tv show generator</h3>
         </nav>
     </header>
-    <main>
-        <img src="./assets/background photo.jpg" />
+    <main class="main-container">
+        <div id="title-container"></div>
+        <div id="photo-summary">
+            <div id="photo-container"></div>
+            <div id="summary-container"></div>
+        </div>
+        <div id="info-up-next">
+            <div id="info-container"></div>
+            <div id="up-next-container"></div>
+        </div>
+        
     </main>
     <footer>
-        <p>SHOWPIC</p>
-        <p>powered by tvmaze</p>
+        <p class="footer-title">SHOWPIC</p>
+        <p class="footer-credit">powered by tvmaze</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("./assets/background-photo.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    background-color: #006AB4;
+    padding: 10px;
+}
+
+h1, h3, .title-container, .info-container, .up-next-container, .footer-title{
+    font-family: 'Passion One', sans-serif;
+    color: white;
+}
+
+h1{
+    font-size: 64px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+.photo-summary{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.photo-container{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    margin: 0px 30px;
+}
+
+.title-container, .summary-container{
+    background-color: hsla(23,74,45,.9);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.summary-container{
+    width: 70%;
+}
+
+.info-container{
+    background-color: hsl(194,100,25,.9);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.up-next-container{
+    background-color: hsl(222,16,69,.9);
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+
+.info-up-next{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 30px;
+    bottom: 30px;
+}
+
+footer{
+    background-color: #006AB4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer-credit{
+    font-family: 'Kulim Park', sans-serif;
+    font-size: 14px;
+    color: white;
+}
+

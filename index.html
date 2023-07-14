@@ -20,20 +20,29 @@
         </nav>
     </header>
     <main class="main-container">
-        <div id="title-container"></div>
-        <div id="photo-summary">
-            <div id="photo-container"></div>
-            <div id="summary-container"></div>
+        
+        <div id="img-summary">
+            <img src="" alt="" />
+            <div class="title-summary">
+                <h1 id="title"></h1>
+                <p id="summary"></p>
+            </div>
         </div>
         <div id="info-up-next">
-            <div id="info-container"></div>
-            <div id="up-next-container"></div>
+            <div id="info-container">
+                <p id="genre"></p>
+                <p id="rating"></p>
+                <p id="premiered"></p>
+                <p id="ended"></p>
+            </div>
+            <button id="up-next">UP NEXT</button>
         </div>
         
     </main>
     <footer>
         <p class="footer-title">SHOWPIC</p>
-        <p class="footer-credit">powered by tvmaze</p>
+        <a href="https://api.tvmaze.com" class="footer-credit">powered by tvmaze</a>
     </footer>
+<script src="./script.js"></script>
 </body>
 </html>

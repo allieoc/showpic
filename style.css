@@ -3,12 +3,16 @@
     padding: 0;
 }
 
-body{
-    background-image: url("./assets/background-photo.jpg");
-    height: 100%;
+html {
+    background-image: url("/assets/background-photo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+  }
+
+a {
+    text-decoration: none;
 }
 
 .nav{
@@ -18,7 +22,7 @@ body{
     padding: 10px;
 }
 
-h1, h3, .title-container, .info-container, .up-next-container, .footer-title{
+h1, #title, #up-next, .footer-title{
     font-family: 'Passion One', sans-serif;
     color: white;
 }
@@ -29,48 +33,95 @@ h1{
 
 h3{
     font-size: 24px;
+    font-family: 'Kulim Park', sans-serif;
+    color: white;
 }
 
-.photo-summary{
+#img-summary{
     display: flex;
     justify-content: space-evenly;
 }
 
-.photo-container{
+img{
     width: 30%;
+    height: auto;
+    max-width: 400px;
     display: flex;
     align-items: center;
     margin: 0px 30px;
-}
-
-.title-container, .summary-container{
-    background-color: hsla(23,74,45,.9);
     border-radius: 10px;
-    padding: 10px;
+    margin-top: 30px;
+
 }
 
-.summary-container{
-    width: 70%;
-}
-
-.info-container{
-    background-color: hsl(194,100,25,.9);
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.up-next-container{
-    background-color: hsl(222,16,69,.9);
-    border-radius: 10px;
-    padding: 10px 30px;
-}
-
-.info-up-next{
+.main-container{
     display: flex;
     flex-direction: column;
-    position: relative;
-    right: 30px;
-    bottom: 30px;
+    margin-top: 20px;
+}
+
+#title{
+    font-size: 40px;
+    background-color: hsla(22, 69%, 48%, 0.9);
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin: 20px auto;
+    display: inline-block;
+    text-align: center;
+}
+
+
+#summary{
+    font-family: 'Kulim Park', sans-serif;
+    color: white;
+    background-color: hsla(22, 69%, 48%, 0.9);
+    border-radius: 10px;
+    padding: 30px;
+    margin-right: 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+.title-summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#info-container{
+    background-color: hsl(194, 100%, 25%, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 30px;
+    align-self: flex-start;
+}
+
+#info-container p{
+    font-family: 'Kulim Park', sans-serif;
+    color: white;
+    padding-top: 5px;
+}
+
+#up-next{
+    background-color: hsla(217, 16%, 70%, 0.9);
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: 200px;
+    border: none;
+    font-size: 40px;
+}
+
+#info-up-next{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 30px 30px 0px;
 }
 
 footer{

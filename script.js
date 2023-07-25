@@ -68,8 +68,12 @@ function getRandomShow(){
     .then((res) => res.json())
     .then((json) => {
         const show = json;
-        createShowProfile(show);
-    })
+        if (show.image && show.image.original && show.summary) {
+            createShowProfile(show);
+          } else {
+            getRandomShow();
+          }
+        })
     .catch((err) => console.log(err));
 }
 

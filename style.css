@@ -11,20 +11,13 @@ html {
     height: 100%;
   }
 
-a {
-    text-decoration: none;
-}
-
-.nav{
-    display: flex;
-    flex-direction: column;
-    background-color: #006AB4;
-    padding: 10px;
-}
-
-h1, #title, #up-next, .footer-title{
+  h1, #title, #up-next, .footer-title{
     font-family: 'Passion One', sans-serif;
     color: white;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1{
@@ -39,27 +32,30 @@ h3{
     color: white;
 }
 
-#img-summary{
+.nav{
     display: flex;
-    justify-content: space-evenly;
-}
-
-img{
-    width: 30%;
-    height: auto;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-    margin: 0px 30px;
-    border-radius: 10px;
-    margin-top: 30px;
-
+    flex-direction: column;
+    background-color: #006AB4;
+    padding: 10px;
 }
 
 .main-container{
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    height: 100%;
+}
+
+#img-summary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    width: 75%;
+    height: auto;
+    max-width: 370px;
+    border-radius: 10px;
 }
 
 #title{
@@ -67,7 +63,7 @@ img{
     background-color: hsla(22, 69%, 48%, 0.9);
     border-radius: 10px;
     padding: 10px 30px;
-    margin: 20px auto;
+    margin: 30px 30px;
     display: inline-block;
     text-align: center;
 }
@@ -79,7 +75,6 @@ img{
     background-color: hsla(22, 69%, 48%, 0.9);
     border-radius: 10px;
     padding: 30px;
-    margin-right: 30px;
     text-align: center;
     display: inline-block;
 }
@@ -87,8 +82,11 @@ img{
 .title-summary{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 70%;
+    margin: 0px 60px;
+    /* border: 2px solid red; */
+    align-self: flex-start;
 }
 
 #info-container{
@@ -100,15 +98,27 @@ img{
     width: 300px;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
-    margin-left: 30px;
     align-self: flex-start;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    /* position: fixed;
+    bottom: 60px;
+    left: 30px; */
 }
 
 #info-container p{
     font-family: 'Kulim Park', sans-serif;
     color: white;
     padding-top: 5px;
+}
+
+.img-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 50%;
+    padding: 30px 0px 30px 60px;
 }
 
 #up-next{
@@ -118,13 +128,10 @@ img{
     width: 200px;
     border: none;
     font-size: 40px;
-}
-
-#info-up-next{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin: 0 30px 30px 0px;
+    margin-right: 30px;
+    position: fixed;
+    bottom: 60px;
+    right: 30px;
 }
 
 footer{
@@ -133,32 +140,50 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-credit{
     font-family: 'Kulim Park', sans-serif;
     font-size: 14px;
     color: white;
+    margin-right: 30px;
 }
 
 @media(max-width: 900px){
-    #img-summary, .title-summary, #info-up-next{
+    .title-summary, .img-info-container, #img-summary {
+        display: flex;
         padding: 0;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    #info-container{
-        margin: 20px auto;
+    .title-summary{
+        margin: auto;
     }
 
-    #info-up-next{
-        margin: 0;
+    #img-summary{
+        margin-bottom: 20px;
+    }
+
+    .img-info-container {
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    #info-container{
+        margin: 20px auto;
+        position: static;
     }
 
     #up-next{
-        margin-bottom: 20px;
+        margin: 0px auto 60px auto;
+        position: static;
     }
 
     #summary{
@@ -166,11 +191,43 @@ footer{
     }
 
     img{
-        margin-top: 0;
+        margin: auto;
         min-width: 200px;
     }
 
+    main {
+        background-image: url("/assets/background-photo.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
+
+      #title {
+        margin: 10px auto 20px auto;
+      }
+}
+
+@media(max-width: 300px){
     #title{
-        margin: 20px 30px;
+        font-size: 24px;
     }
+
+    #info-container{
+        width: 80%;
+        font-size: 14px;
+    }
+
+    #summary{
+        font-size: 14px;
+        width: 100%;
+    }
+
+    html {
+        background-image: url("/assets/background-photo.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
 }
